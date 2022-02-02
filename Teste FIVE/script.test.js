@@ -2,7 +2,7 @@ const { expect } = require('@jest/globals')
 const numeroFeliz = require('./script')
 
 test('happyNumber', () => {
-    expect(numeroFeliz(19)).toBe(true);
+    expect(numeroFeliz(3)).toBe(true);
 })
 
 
