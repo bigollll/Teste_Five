@@ -1,10 +1,13 @@
 const { expect } = require('@jest/globals')
 const numeroFeliz = require('./script')
 
-test('happyNumber', () => {
-    expect(numeroFeliz(3)).toBe(true);
+describe('happyNumber', () => {
+    test('Should return true with a known happy number', () => {
+        const knowHappyNumber = 19;
+        expect(numeroFeliz(knowHappyNumber)).toBe(true);
+    });
+    test('Should return false with a known non happy number', () => {
+        const numberNotHappy = 2;
+        expect(numeroFeliz(numberNotHappy)).toBe(false);
+    });
 })
-
-
-
-/*Para o teste unitario, colocar o número a ser testado dentro do parametro do numeroFeliz na linha 5 e rodar no terminal "npm run test" ele dira se o numero passou ou não no teste.*/
